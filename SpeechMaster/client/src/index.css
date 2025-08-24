@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(210, 7%, 13%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 7%, 13%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 7%, 13%);
+  --primary: hsl(215, 89%, 52%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 7%, 13%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(240, 2%, 90%);
+  --muted-foreground: hsl(210, 7%, 13%);
+  --accent: hsl(210, 40%, 92%);
+  --accent-foreground: hsl(215, 89%, 52%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(220, 13%, 97%);
+  --ring: hsl(215, 89%, 52%);
+  --chart-1: hsl(215, 89%, 52%);
+  --chart-2: hsl(142, 76%, 36%);
+  --chart-3: hsl(49, 93%, 56%);
+  --chart-4: hsl(142, 69%, 42%);
+  --chart-5: hsl(340, 75%, 51%);
+  --sidebar: hsl(180, 6.6667%, 97.0588%);
+  --sidebar-foreground: hsl(210, 25%, 7.8431%);
+  --sidebar-primary: hsl(203.8863, 88.2845%, 53.1373%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(211.5789, 51.3514%, 92.7451%);
+  --sidebar-accent-foreground: hsl(203.8863, 88.2845%, 53.1373%);
+  --sidebar-border: hsl(205.0000, 25.0000%, 90.5882%);
+  --sidebar-ring: hsl(202.8169, 89.1213%, 53.1373%);
+  --font-sans: 'Google Sans', 'Roboto', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  
+  /* Google Colors */
+  --google-blue: hsl(215, 89%, 52%);
+  --google-green: hsl(142, 69%, 53%);
+  --google-red: hsl(4, 82%, 57%);
+  --google-yellow: hsl(49, 93%, 56%);
+  --light-bg: hsl(0, 0%, 98%);
+  --light-text: hsl(210, 7%, 13%);
+  --light-card: hsl(0, 0%, 100%);
+  --dark-blue: hsl(215, 71%, 73%);
+  --dark-green: hsl(142, 52%, 73%);
+  --dark-red: hsl(4, 69%, 73%);
+}
+
+.dark {
+  --background: hsl(210, 7%, 13%);
+  --foreground: hsl(213, 31%, 91%);
+  --card: hsl(222, 84%, 19%);
+  --card-foreground: hsl(213, 31%, 91%);
+  --popover: hsl(210, 7%, 13%);
+  --popover-foreground: hsl(213, 31%, 91%);
+  --primary: hsl(215, 71%, 73%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(213, 31%, 91%);
+  --secondary-foreground: hsl(210, 7%, 13%);
+  --muted: hsl(0, 0%, 9%);
+  --muted-foreground: hsl(210, 3%, 46%);
+  --accent: hsl(215, 70%, 8%);
+  --accent-foreground: hsl(215, 71%, 73%);
+  --destructive: hsl(0, 82%, 57%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 5%, 15%);
+  --input: hsl(208, 28%, 18%);
+  --ring: hsl(215, 89%, 52%);
+  --chart-1: hsl(215, 89%, 52%);
+  --chart-2: hsl(142, 76%, 36%);
+  --chart-3: hsl(49, 93%, 56%);
+  --chart-4: hsl(142, 69%, 42%);
+  --chart-5: hsl(340, 75%, 51%);
+  --sidebar: hsl(222, 84%, 19%);
+  --sidebar-foreground: hsl(213, 31%, 91%);
+  --sidebar-primary: hsl(215, 89%, 52%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(215, 70%, 8%);
+  --sidebar-accent-foreground: hsl(215, 71%, 73%);
+  --sidebar-border: hsl(215, 16%, 26%);
+  --sidebar-ring: hsl(215, 89%, 52%);
+  
+  /* Dark mode Google Colors */
+  --dark-bg: hsl(210, 7%, 13%);
+  --dark-text: hsl(213, 31%, 91%);
+  --dark-card: hsl(222, 84%, 19%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  
+  .theme-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  .google-blue {
+    color: var(--google-blue);
+  }
+  
+  .dark .google-blue {
+    color: var(--dark-blue);
+  }
+  
+  .bg-google-blue {
+    background-color: var(--google-blue);
+  }
+  
+  .dark .bg-google-blue {
+    background-color: var(--dark-blue);
+  }
+  
+  .google-green {
+    color: var(--google-green);
+  }
+  
+  .dark .google-green {
+    color: var(--dark-green);
+  }
+  
+  .bg-google-green {
+    background-color: var(--google-green);
+  }
+  
+  .dark .bg-google-green {
+    background-color: var(--dark-green);
+  }
+  
+  .google-red {
+    color: var(--google-red);
+  }
+  
+  .dark .google-red {
+    color: var(--dark-red);
+  }
+  
+  .bg-google-red {
+    background-color: var(--google-red);
+  }
+  
+  .dark .bg-google-red {
+    background-color: var(--dark-red);
+  }
+  
+  .light-bg {
+    background-color: var(--light-bg);
+  }
+  
+  .dark .light-bg {
+    background-color: var(--dark-bg);
+  }
+  
+  .light-text {
+    color: var(--light-text);
+  }
+  
+  .dark .light-text {
+    color: var(--dark-text);
+  }
+  
+  .light-card {
+    background-color: var(--light-card);
+  }
+  
+  .dark .light-card {
+    background-color: var(--dark-card);
+  }
+}
+
+@layer utilities {
+  .animate-wave {
+    animation: wave 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
