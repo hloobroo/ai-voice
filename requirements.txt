@@ -1,0 +1,7 @@
+flask
+flask-cors
+gunicorn
+gpt4all==1.0.7
+pydub
+numpy
+librosa
